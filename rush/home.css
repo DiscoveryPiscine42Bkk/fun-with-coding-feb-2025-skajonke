@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* จัดกึ่งกลางแนวนอน */
+    height: 100vh; /* ให้สูงเต็มหน้าจอ */
+    margin: 0;
+    justify-content: center;
+    text-align: center; /* จัดตัวหนังสือตรงกลาง */
+    background-image: url(S__14090257.jpg);
+    background-size: cover; /* ปรับขนาดเป็น 150% ของรูปเดิม */
+    background-position: center; /* ให้ซูมจากกึ่งกลาง */
+}
+.title{
+    font-size: clamp(40px, 8vw, 75px);
+    font-weight: bold;
+    color: rgb(255, 251, 251);
+
+}    
+
+.image-container {
+    display: flex;
+    gap: 3vw; /* ระยะห่างระหว่างรูป */
+    justify-content: center; /* จัดให้อยู่ตรงกลาง */
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.image-box {
+    width: min(90vw, 400px);
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    display: block;
+    text-align: center; /* จัดให้ชื่ออยู่ตรงกลางใต้รูป */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin: 0 auto;
+}
+
+.image-box img {
+    width: 400px; /* ปรับขนาดรูป */
+    height: auto;
+    border-radius: 15px; /* ทำให้ขอบมน */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    display: block;
+    margin: 0 auto;
+    
+}
+
+.image-box img:hover {
+    transform: scale(1.02) !important; /* ขยายขึ้น 10% */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7) !important; /* เพิ่มเงา */
+}
+
+.name {
+    margin-top: 10px;
+    font-size: clamp(16px, 3vw, 30px); /* ปรับขนาด font ตามจอ */
+    font-weight: bold;
+}
+
+.name a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: text-shadow 0.3s ease-in-out;
+
+}
+
+.name a:hover {
+    color: rgb(173, 117, 181); /* เปลี่ยนสีเมื่อ hover */
+    text-shadow: 0px 0px 10px rgba(173, 117, 181, 0.8);
+
+}
+
+.left {
+    font-size: clamp(16px, 3vw, 24px); /* ปรับขนาด font ให้อ่านง่าย */
+    color: rgb(255, 251, 251);
+    text-align: center;
+    font-weight: bold;
+    max-width: 90vw; /* ป้องกันข้อความยาวเกิน */
+}
+
